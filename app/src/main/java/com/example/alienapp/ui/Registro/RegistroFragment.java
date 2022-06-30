@@ -17,6 +17,8 @@ import com.example.alienapp.Model.Alien;
 import com.example.alienapp.databinding.FragmentLoginBinding;
 import com.example.alienapp.databinding.FragmentRegistroBinding;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -42,7 +44,7 @@ public class RegistroFragment extends Fragment {
             final TextView nac = binding.Fechadenacimiento;
             final TextView status = binding.Estatussocial;
             final TextView usuario = binding.usuario;
-
+            //final HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
             @Override
             public void onClick(View v) {
                 String alien_usuario = usuario.getText().toString().trim();
@@ -54,9 +56,14 @@ public class RegistroFragment extends Fragment {
                 String alien_nac = nac.getText().toString().trim();
                 String alien_status = status.getText().toString().trim();
 
+                //loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+                final OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+               // httpClient.addInterceptor(loggingInterceptor);
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("https://api-alien.herokuapp.com")
+                        .baseUrl("https://api-alien.herokuapp.com/")
                         .addConverterFactory(GsonConverterFactory.create())
+                       // .client(httpClient.build())
                         .build();
                 ApiAlien apiAlien = retrofit.create(ApiAlien.class);
                 Call<Alien> call = apiAlien.addAlien(alien_usuario, alien_nombre, alien_ap, alien_am, alien_correo, alien_contrasenia, alien_nac, alien_status);

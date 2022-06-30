@@ -1,6 +1,7 @@
 package com.example.alienapp.Interface;
 
 import com.example.alienapp.Model.Alien;
+import com.example.alienapp.Model.Login;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -12,8 +13,8 @@ import retrofit2.http.POST;
 public interface ApiAlien {
 
 
-    @FormUrlEncoded
-    @POST("/aliens")
+   @FormUrlEncoded
+    @POST("aliens")
     Call<Alien> addAlien(
             @Field("alien_usuario") String alien_usuario,
             @Field("alien_nombre") String alien_nombre,
@@ -24,6 +25,14 @@ public interface ApiAlien {
             @Field("alien_nac") String alien_nac,
             @Field("alien_status") String alien_status
 
+    );
+
+
+    @FormUrlEncoded
+    @POST("login")
+    Call<Login>logAlien(
+            @Field("alien_correo") String alien_correo,
+            @Field("alien_contrasenia") String alien_contrasenia
     );
 
 }

@@ -32,9 +32,9 @@
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="249dp"
-        android:ems="10"
-        android:hint="Usuario"
-        android:inputType="textPersonName"
+        android:ems="100"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
         android:textAlignment="center"
         android:textColor="#E91E63"
         android:textColorHighlight="#E91E63"
@@ -51,7 +51,7 @@
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="48dp"
-        android:ems="10"
+        android:ems="100"
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:textAlignment="center"
@@ -74,6 +74,8 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
