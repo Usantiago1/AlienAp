@@ -13,7 +13,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-
+ 
 import com.example.alienapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
