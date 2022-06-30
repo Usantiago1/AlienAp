@@ -8,7 +8,7 @@ public class Alien {
     private String alien_correo;
     private String alien_contrasenia;
     private String alien_nac;
-    private String alien_estatus;
+    private String alien_status;
 
 
 
@@ -68,12 +68,12 @@ public class Alien {
         this.alien_nac = alien_nac;
     }
 
-    public String getAlien_estatus() {
-        return alien_estatus;
+    public String getAlien_status() {
+        return alien_status;
     }
 
-    public void setAlien_estatus(String alien_estatus) {
-        this.alien_estatus = alien_estatus;
+    public void setAlien_status(String alien_status) {
+        this.alien_status = alien_status;
     }
 
     public Alien(String alien_usuario,String alien_nombre, String alien_ap, String alien_am, String alien_correo, String alien_contrasenia, String alien_nac, String alien_estatus) {
@@ -84,6 +84,6 @@ public class Alien {
         this.alien_correo = alien_correo;
         this.alien_contrasenia = alien_contrasenia;
         this.alien_nac = alien_nac;
-        this.alien_estatus = alien_estatus;
+        this.alien_status = alien_estatus;
     }
 }
