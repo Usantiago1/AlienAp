@@ -66,7 +66,7 @@ public class RegistroFragment extends Fragment {
                         if (response.isSuccessful() && response.body() != null){
                             Toast.makeText(getContext(), "REGISTRADO", Toast.LENGTH_SHORT).show();
                         }else {
-                            Toast.makeText(getContext(), "NO REGISTRADO", Toast.LENGTH_SHORT).show();
+                             Toast.makeText(getContext(), "NO REGISTRADO", Toast.LENGTH_SHORT).show();
                         }
                     }
 
